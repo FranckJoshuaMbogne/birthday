@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For my little bird</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#F9DDD6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='56' rx='40' ry='34' fill='%23D96C80'/%3E%3Cellipse cx='57' cy='68' rx='24' ry='18' fill='%23FFF1EA'/%3E%3Ccircle cx='68' cy='46' r='5' fill='%233A1C2A'/%3E%3Cpath d='M88 44 L99 49 L88 54Z' fill='%23C9A25E'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/greatvibes.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<!-- ============ LOCK ============ -->
+<div id="lock" role="dialog" aria-label="Enter the secret code">
+  <div class="lock-bg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="lock-card" id="lockCard">
+    <svg class="lock-bird" id="lockBird" width="120" height="100" viewBox="0 0 120 100" aria-hidden="true">
+      <g class="lb-body" transform="translate(60 56)">
+        <path d="M-40 4 L-62 -8 L-56 6 L-64 14 Z" fill="#8E3B55"/>
+        <ellipse rx="44" ry="38" fill="#D96C80"/><ellipse cx="8" cy="14" rx="27" ry="20" fill="#FFF1EA"/>
+        <path class="wing" d="M-26 -6 C -8 -48, 26 -40, 16 -8 Z" fill="#8E3B55"/>
+        <circle cx="22" cy="-12" r="4.5" fill="#3A1C2A"/><circle cx="24" cy="-14" r="1.5" fill="#fff"/>
+        <path d="M40 -12 L54 -7 L40 -3 Z" fill="#C9A25E"/>
+      </g>
+      <path class="lb-heart" d="M112 22 c0-7-9-9-12-3c-3-6-12-4-12 3c0 8 12 13 12 16c0-3 12-8 12-16z" fill="#D96C80"/>
+    </svg>
+    <div class="eyebrow">A LITTLE SECRET</div>
+    <h1 class="script">Hello, little bird</h1>
+    <p class="lock-sub">This place only opens for you.</p>
+
+    <div class="pin" id="pin" aria-live="polite">
+      <div class="grp"><div class="row"><b></b><b></b></div><span>DD</span></div><em>/</em>
+      <div class="grp"><div class="row"><b></b><b></b></div><span>MM</span></div><em>/</em>
+      <div class="grp"><div class="row"><b></b><b></b><b></b><b></b></div><span>YYYY</span></div>
+    </div>
+    <p class="lock-msg" id="lockMsg">&nbsp;</p>
+
+    <div class="pad" id="pad">
+      <button type="button" data-k="1">1</button><button type="button" data-k="2">2</button><button type="button" data-k="3">3</button>
+      <button type="button" data-k="4">4</button><button type="button" data-k="5">5</button><button type="button" data-k="6">6</button>
+      <button type="button" data-k="7">7</button><button type="button" data-k="8">8</button><button type="button" data-k="9">9</button>
+      <button type="button" class="ghost" data-k="clear" aria-label="Clear">♡</button><button type="button" data-k="0">0</button><button type="button" class="ghost" data-k="back" aria-label="Delete">⌫</button>
+    </div>
+
+    <p class="hint">Hint: <b>the day the world got its little bird</b></p>
+    <p class="lock-quote">“Hope is the thing with feathers…” <span>— Emily Dickinson</span></p>
+  </div>
+</div>
+
+<!-- ============ APP (filled after unlock) ============ -->
+<div id="app" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
